@@ -2,7 +2,7 @@ module testbench;
     reg CLK, RST, FLICK;
     wire [15:0] LED;
 
-    reg [3:0] test_case;
+    reg [5:0] test_case;
     integer i;
 
     initial begin
@@ -17,59 +17,42 @@ module testbench;
         #0 FLICK <= 0;
         #5 RST <= 1;
 
-        // Test case 1
+        // Test case 1 - normal_flow
         #5 test_case <= 1;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
         #525 FLICK <= 1;
         #5 FLICK <= 0;
 
-        // Test case 2
+        // Test case 2 - state_up_reset
         #800 test_case <= 2;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
         #300 RST <= 0;
         #5 RST <= 1;
 
-        // Test case 3
+        // Test case 3 - state_down_reset
         #300 test_case <= 3;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
         #370 RST <= 0;
         #5 RST <= 1;
          
-        // Test case 4
+        // Test case 4 - valid_flick
         #300 test_case <= 4;
-        #0 FLICK <= 1;
-        #5 FLICK <= 0;
-        #10 FLICK <= 1;
-        #5 FLICK <= 0;
-        
-        // Test case 5
-        #800 test_case <= 5;
-        #0 FLICK <= 1;
-        #5 FLICK <= 0;
-        #510 FLICK <= 1;
-        #5 FLICK <= 0;
-        
-        // Test case 6
-        #500 test_case <= 6;
-        #0 FLICK <= 1;
-        #5 FLICK <= 0;
-        #60 FLICK <= 1;
-        #5 FLICK <= 0;
-        #390 FLICK <= 1;
-        #5 FLICK <= 0;
-        
-        // Test case 7
-        #300 test_case <= 7;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
         #255 FLICK <= 1;
         #5 FLICK <= 0;
-        
-        // Test case 8
-        #600 test_case <= 8;
+        #295 FLICK <= 1;
+        #5 FLICK <= 0;
+        #345 FLICK <= 1;
+        #5 FLICK <= 0;
+        #500 FLICK <= 1;
+        #5 FLICK <= 0;
+
+        // Test case 5 - invalid_flick
+        #600 test_case <= 5;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
         for (i = 0; i < 25; i = i + 1) begin
@@ -91,7 +74,56 @@ module testbench;
             #5 FLICK <= 1;
             #5 FLICK <= 0;
         end
+
+        // Test case 6 - long_flick_state_down_kickback_0
+        #500 test_case <= 6;
+        #0 FLICK <= 1;
+        #5 FLICK <= 0;
+        #510 FLICK <= 1;
+        #40 FLICK <= 0;
         
+        // Test case 7 - long_flick_state_down_kickback_5
+        #800 test_case <= 7;
+        #0 FLICK <= 1;
+        #5 FLICK <= 0;
+        #355 FLICK <= 1;
+        #40 FLICK <= 0;
+        
+        // Test case 8 - reset_with_flick 
+        #600 test_case <= 8;
+        #0 FLICK <= 1;
+        #5 FLICK <= 0;
+        #355 RST <= 0;
+        #0 FLICK <= 1;
+        #5 RST <= 1;
+        #0 FLICK <= 0;
+
+        // Test case 9 - reset_with_clk
+        #200 test_case <= 9;
+        #0 FLICK <= 1;
+        #5 FLICK <= 0;
+        #100 RST <= 0;
+        #5 RST <= 1;
+
+        // Test case 10 - reset_with_clk_with_flick 
+        #300 test_case <= 10;
+        #0 FLICK <= 1;
+        #5 FLICK <= 0;
+        #360 RST <= 0;
+        #0 FLICK <= 1;
+        #5 RST <= 1;
+        #0 FLICK <= 0;
+
+        // Test case 11 - flick_after_reset 
+        #300 test_case <= 11;
+        #0 FLICK <= 1;
+        #5 FLICK <= 0;
+        #355 RST <= 0;
+        #5 RST <= 1;
+        #0 FLICK <= 1;
+        #5 FLICK <= 0;
+
+
         #10000 $finish;
     end
 
