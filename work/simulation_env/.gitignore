@@ -1,7 +1,6 @@
-# Ignore everything
-*
-
-# But not these files...
-!.gitignore
-!bound_flasher.v
-!testbench.v
+run.history
+run.log
+sim  
+waves.dsn
+waves.trn
+xcelium.d/
