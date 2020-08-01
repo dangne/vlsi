@@ -3,5 +3,6 @@ LAB2/
 LAB3/
 LEF/
 LIB/
-RTL/
 README
+RTL/*
+!RTL/bound_flasher_m.v
