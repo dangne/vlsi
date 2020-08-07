@@ -1,0 +1,10 @@
+#!/bin/bash -f
+
+# Setting license for using Conformal
+cd /home/share_file/Cadence_Tools/
+source add_path
+source add_license
+cd -
+
+# Invoke Conformal
+lec -64 -dofile ./lec.tcl &
