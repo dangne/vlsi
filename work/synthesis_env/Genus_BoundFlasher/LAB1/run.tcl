@@ -144,7 +144,7 @@ time_info OPT
 write_snapshot -outdir $_REPORTS_PATH -tag final
 report_summary -directory $_REPORTS_PATH
 write_hdl  > ${_OUTPUTS_PATH}/${DESIGN}_m.v
-write_script > ${_OUTPUTS_PATH}/${DESIGN}_m.script
+## write_script > ${_OUTPUTS_PATH}/${DESIGN}_m.script
 write_sdc > ${_OUTPUTS_PATH}/${DESIGN}_m.sdc
 
 
