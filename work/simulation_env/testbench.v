@@ -21,7 +21,7 @@ module testbench;
         #5 test_case <= 1;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
-        #525 FLICK <= 1;
+        #560 FLICK <= 1;
         #5 FLICK <= 0;
 
         // Test case 2 - state_up_reset
@@ -42,35 +42,42 @@ module testbench;
         #300 test_case <= 4;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
-        #255 FLICK <= 1;
+        #265 FLICK <= 1;
         #5 FLICK <= 0;
-        #295 FLICK <= 1;
+        #335 FLICK <= 1;
         #5 FLICK <= 0;
-        #345 FLICK <= 1;
+        #385 FLICK <= 1;
         #5 FLICK <= 0;
         #500 FLICK <= 1;
         #5 FLICK <= 0;
+        #170 FLICK <= 1;
+        #5 FLICK <= 0;
 
         // Test case 5 - invalid_flick
-        #600 test_case <= 5;
+        #800 test_case <= 5;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
-        for (i = 0; i < 25; i = i + 1) begin
+        for (i = 0; i < 26; i = i + 1) begin
             #5 FLICK <= 1;
             #5 FLICK <= 0;
         end
-        #20 
-        for (i = 0; i < 8; i = i + 1) begin
+        #10 
+        for (i = 0; i < 11; i = i + 1) begin
             #5 FLICK <= 1;
             #5 FLICK <= 0;
         end
-        #20
-        for (i = 0; i < 3; i = i + 1) begin
+        #10
+        for (i = 0; i < 4; i = i + 1) begin
             #5 FLICK <= 1;
             #5 FLICK <= 0;
         end
-        #20
-        for (i = 0; i < 8; i = i + 1) begin
+        #10
+        for (i = 0; i < 6; i = i + 1) begin
+            #5 FLICK <= 1;
+            #5 FLICK <= 0;
+        end
+        #10
+        for (i = 0; i < 4; i = i + 1) begin
             #5 FLICK <= 1;
             #5 FLICK <= 0;
         end
@@ -79,14 +86,14 @@ module testbench;
         #500 test_case <= 6;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
-        #510 FLICK <= 1;
+        #435 FLICK <= 1;
         #40 FLICK <= 0;
         
         // Test case 7 - long_flick_state_down_kickback_5
         #800 test_case <= 7;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
-        #355 FLICK <= 1;
+        #385 FLICK <= 1;
         #40 FLICK <= 0;
         
         // Test case 8 - reset_with_flick 
