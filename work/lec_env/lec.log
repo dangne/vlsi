@@ -8,18 +8,18 @@ Cadence Design Systems, Inc., and may be used and disclosed only as authorized
 in a license agreement controlling such use and disclosure.
 
 0
-CPU time     : 0.87    seconds
-Elapse time  : 19      seconds
-Memory usage : 313.32  M bytes
+CPU time     : 1.19    seconds
+Elapse time  : 20      seconds
+Memory usage : 313.29  M bytes
 // Command: read_library slow.lib -lib -revised
 // Parsing file slow.lib ...
 // Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:1)
 // Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:16)
 // Note: Read Liberty library successfully
 0
-CPU time     : 1.15    seconds
-Elapse time  : 20      seconds
-Memory usage : 329.95  M bytes
+CPU time     : 1.51    seconds
+Elapse time  : 22      seconds
+Memory usage : 330.02  M bytes
 // Command: read_design bound_flasher.v -verilog -golden
 // Parsing file bound_flasher.v ...
 // Golden root module is set to 'bound_flasher'
@@ -34,11 +34,17 @@ Memory usage : 329.95  M bytes
 // Warning: (RTL23) Flop with asynchronous hold might cause non-equivalence with synthesized netlist (occurrence:1)
 // Note: Read VERILOG design successfully
 0
+CPU time     : 1.64    seconds
+Elapse time  : 24      seconds
+Memory usage : 337.06  M bytes
 // Command: read_design bound_flasher_m.v -verilog -revised
 // Parsing file bound_flasher_m.v ...
 // Revised root module is set to 'bound_flasher'
 // Note: Read VERILOG design successfully
 0
+CPU time     : 1.75    seconds
+Elapse time  : 26      seconds
+Memory usage : 342.61  M bytes
 // Command: set_mapping_method -name only
 0
 // Command: set_system_mode lec
@@ -46,9 +52,9 @@ Memory usage : 329.95  M bytes
 // Modeling Golden ...
 // Processing Revised ...
 // Modeling Revised ...
-CPU time     : 1.47    seconds
-Elapse time  : 28      seconds
-Memory usage : 369.73  M bytes
+CPU time     : 2.01    seconds
+Elapse time  : 29      seconds
+Memory usage : 369.78  M bytes
 // Mapping key points ...
 ================================================================================
 Mapped points: SYSTEM class
