@@ -46,11 +46,7 @@ module testbench;
         #5 FLICK <= 0;
         #335 FLICK <= 1;
         #5 FLICK <= 0;
-        #385 FLICK <= 1;
-        #5 FLICK <= 0;
-        #500 FLICK <= 1;
-        #5 FLICK <= 0;
-        #170 FLICK <= 1;
+        #285 FLICK <= 1;
         #5 FLICK <= 0;
 
         // Test case 5 - invalid_flick
@@ -86,14 +82,14 @@ module testbench;
         #500 test_case <= 6;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
-        #435 FLICK <= 1;
+        #415 FLICK <= 1;
         #40 FLICK <= 0;
         
         // Test case 7 - long_flick_state_down_kickback_5
         #800 test_case <= 7;
         #0 FLICK <= 1;
         #5 FLICK <= 0;
-        #385 FLICK <= 1;
+        #365 FLICK <= 1;
         #40 FLICK <= 0;
         
         // Test case 8 - reset_with_flick 

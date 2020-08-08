@@ -1,2 +1,157 @@
 #Version: 20.10-p100 (01-May-2020) (64 bit executable)
- guiWinConfig .a.pane.f3.command.text.text.promt2 76 19 1 20 
+ guiWinConfig .a.pane.f3.command.text.text.promt2 92 19 1 20 
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+     tk::MbEnter .v_menu.help
+     tk::MbMotion .v_menu.help up 736 78
+     tk::MbLeave .v_menu.help
+ guiWinConfig . 1863 1025 57 55 
+ guiWinConfig .v_menu 1863 34 0 0 
+ guiWinConfig .cdnBranding 1863 4 0 34 
+ guiWinConfig .icon 1863 34 0 38 
+ guiWinConfig .b 1863 31 0 994 
+ guiWinConfig .a 1863 922 0 72 
+ guiWinConfig .v_menu.logo 97 34 1766 0 
+ guiWinConfig .icon.lec 80 30 1781 2 
+ guiWinConfig .icon.setup 80 30 1699 2 
+ guiWinConfig .b.met 202 23 1657 4 
+ guiWinConfig .b.frame 1645 23 4 4 
+ guiWinConfig .a.pane 1863 922 0 0 
+ guiWinConfig .a.pane.sep2 1863 2 0 743 
+ guiWinConfig .a.pane.sep1 1863 2 0 464 
+ guiWinConfig .a.pane.f1 1863 465 0 0 
+ guiWinConfig .a.pane.f2 1863 279 0 465 
+ guiWinConfig .a.pane.f3 1863 178 0 744 
+ guiWinConfig .a.pane.f1.middle 1863 465 0 0 
+ guiWinConfig .a.pane.f2.mesg 1863 279 0 0 
+ guiWinConfig .a.pane.f3.command 1861 176 1 1 
+ guiWinConfig .a.pane.btn2 9 9 1850 740 
+ guiWinConfig .a.pane.btn1 9 9 1850 461 
+ guiWinConfig .a.pane.f1.middle.nb 1861 463 1 1 
+ guiWinConfig .a.pane.f2.mesg.text 1863 279 0 0 
+ guiWinConfig .a.pane.f3.command.text 1861 176 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe 1861 463 0 0 
+tixVStack:ClientGeomProc .a.pane.f1.middle.nb -configure .a.pane.f1.middle.nb.nbframe.hier
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier 1845 408 8 47 
+ guiWinConfig .a.pane.f2.mesg.text.text 1850 279 0 0 
+ guiWinConfig .a.pane.f2.mesg.text.vsb 13 279 1850 0 
+ guiWinConfig .a.pane.f3.command.text.text 1848 176 0 0 
+ guiWinConfig .a.pane.f3.command.text.vsb 13 176 1848 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.golden 922 408 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.revised 923 408 922 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.golden.fm1 922 29 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.golden.fm 918 375 2 31 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.revised.fm1 923 29 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.revised.fm 919 375 2 31 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.golden.fm1.label 55 21 433 4 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree 916 373 1 1 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.revised.fm1.label 60 21 431 4 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree 917 373 1 1 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1 916 373 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1 917 373 0 0 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist 914 371 1 1 
+ guiWinConfig .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree.f1.hlist 915 371 1 1 
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+#Gui Step(0)===>(Text).a.pane.f2.mesg.text.text <Button-1> 40.25
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 0:  (Text) <Button-1>\
+ 40.25} .a.pane.f2.mesg.text.text } 
+set x [guiGetTextX .a.pane.f2.mesg.text.text 40 25];set y [guiGetTextY .a.pane.f2.mesg.text.text 40 25] 
+     .a.pane.f2.mesg.text.text configure -state normal
+    tkTextButton1 .a.pane.f2.mesg.text.text $x $y
+#Gui Step(1)===>(Text).a.pane.f2.mesg.text.text <Button-1> 40.25
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 1:  (Text) <Button-1>\
+ 40.25} .a.pane.f2.mesg.text.text } 
+set x [guiGetTextX .a.pane.f2.mesg.text.text 40 25];set y [guiGetTextY .a.pane.f2.mesg.text.text 40 25] 
+     tk::TextButton1 .a.pane.f2.mesg.text.text $x $y
+    .a.pane.f2.mesg.text.text tag remove sel 0.0 end
+     tkCancelRepeat
+    set pos [.a.pane.f2.mesg.text.text index insert]
+    #set pos {end - 1 chars}
+    .a.pane.f2.mesg.text.text mark set insert $pos
+    .a.pane.f2.mesg.text.text see insert
+    .a.pane.f2.mesg.text.text configure -state disabled
+     tk::CancelRepeat
+#Gui Step(4)===>(Text).a.pane.f2.mesg.text.text <Button-1> 39.32
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 4:  (Text) <Button-1>\
+ 39.32} .a.pane.f2.mesg.text.text } 
+set x [guiGetTextX .a.pane.f2.mesg.text.text 39 32];set y [guiGetTextY .a.pane.f2.mesg.text.text 39 32] 
+     .a.pane.f2.mesg.text.text configure -state normal
+    tkTextButton1 .a.pane.f2.mesg.text.text $x $y
+#Gui Step(5)===>(Text).a.pane.f2.mesg.text.text <Button-1> 39.32
+global guiReplayPause
+if {[info exists guiReplayPause] && $guiReplayPause == 1} { guiReplayBreakMsg {Step 5:  (Text) <Button-1>\
+ 39.32} .a.pane.f2.mesg.text.text } 
+set x [guiGetTextX .a.pane.f2.mesg.text.text 39 32];set y [guiGetTextY .a.pane.f2.mesg.text.text 39 32] 
+     tk::TextButton1 .a.pane.f2.mesg.text.text $x $y
+    .a.pane.f2.mesg.text.text tag remove sel 0.0 end
+     tkCancelRepeat
+    set pos [.a.pane.f2.mesg.text.text index insert]
+    #set pos {end - 1 chars}
+    .a.pane.f2.mesg.text.text mark set insert $pos
+    .a.pane.f2.mesg.text.text see insert
+    .a.pane.f2.mesg.text.text configure -state disabled
+     tk::CancelRepeat
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+         if { [ .icon.modelmgr cget -state ] == "normal" } {
+            .icon.modelmgr configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.modelmgr
+ .icon.modelmgr configure -relief flat 
+     tk::ButtonLeave .icon.modelmgr
+         if { [ .icon.rulechk cget -state ] == "normal" } {
+            .icon.rulechk configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.rulechk
+ .icon.rulechk configure -relief flat 
+     tk::ButtonLeave .icon.rulechk
+ guiTextKeyPress .a.pane.f2.mesg.text.text {}
+ guiTextKeyPress .a.pane.f2.mesg.text.text {}
+AppExit
+callback Gui_hlist_leave .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree.f1.hlist
+ .exit.yes instate !disabled {.exit.yes state active} 
+ .exit.yes state !active 
+ .exit.yes instate !disabled {.exit.yes state active} 
+ .exit.yes instate !disabled { ttk::clickToFocus .exit.yes; .exit.yes state pressed } 
+ .exit.yes instate pressed { .exit.yes state !pressed; .exit.yes instate !disabled { .exit.yes invoke } } 
+tixBalloon:ClientDestroy .icon.b .v_menu.logo
+     [tixGetMethod .icon.b [set .icon.b(className)] Destructor] .icon.b
+tixBalloon:ClientDestroy .icon.b .icon.rlib
+tixBalloon:ClientDestroy .icon.b .icon.rdsn
+tixBalloon:ClientDestroy .icon.b .icon.srccode
+tixBalloon:ClientDestroy .icon.b .icon.rulechk
+tixBalloon:ClientDestroy .icon.b .icon.modelmgr
+tixBalloon:ClientDestroy .icon.b .icon.hierCmp
+tixBalloon:ClientDestroy .icon.b .icon.gate
+tixBalloon:ClientDestroy .icon.b .icon.comp
+tixBalloon:ClientDestroy .icon.b .icon.rrcmgr
+tixBalloon:ClientDestroy .icon.b .icon.diag
+tixBalloon:ClientDestroy .icon.b .icon.refresh
+tixBalloon:ClientDestroy .icon.b .icon.find
+tixBalloon:ClientDestroy .icon.b .icon.stop
+tixBalloon:ClientDestroy .icon.b .icon.setup
+tixBalloon:ClientDestroy .icon.b .icon.lec
+tixPrimitive:Destructor .b.met
+tixPrimitive:Destructor .a.pane.f1.middle.nb.nbframe.library.golden.fm.tree
+tixPrimitive:Destructor .a.pane.f1.middle.nb.nbframe.library.revised.fm.tree
+.a.pane.f1.middle.nb delete library
+.a.pane.f1.middle.nb delete tool
+.a.pane.f1.middle.nb delete design
+.a.pane.f1.middle.nb delete rule
+tixPrimitive:Destructor .a.pane.f1.middle.nb.nbframe.hier.golden.fm.tree
+tixPrimitive:Destructor .a.pane.f1.middle.nb.nbframe.hier.revised.fm.tree
+.a.pane.f1.middle.nb delete hier
+tixVStack:DestroyTop .a.pane.f1.middle.nb
+tixPrimitive:Destructor .a.pane.f1.middle.nb
+ 	idoc_cleanup .a.pane.f2.mesg.text.text
+    
+ 	idoc_cleanup .a.pane.f2.mesg.text.text
+    
+tixPrimitive:Destructor .a.pane.f2.mesg.text
+ 	idoc_cleanup .a.pane.f3.command.text.text
+    
+tixPrimitive:Destructor .a.pane.f3.command.text
+tixPrimitive:Destructor .a.pane

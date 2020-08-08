@@ -14,18 +14,18 @@ module bound_flasher(CLK, RST, FLICK, LED);
     parameter IDLE = 2'b00;
     parameter UP   = 2'b01;
     parameter DOWN = 2'b10;
-    parameter KB0  = ((1 << 0)-1);
-    parameter KB1  = ((1 << 5)-1);
+    parameter KB0  = 16'h0000;
+    parameter KB1  = 16'h001f;
     parameter MAX_KEY = 3;
 
-    assign valid_flick = (state == IDLE || (state == DOWN && (LED == KB0 || LED == KB1))) ? FLICK : 0;
+    assign valid_flick = (state == IDLE || (state == DOWN && min_max_key < 2 && (LED == KB0 || LED == KB1))) ? FLICK : 0;
 
     always @(min_max_key) begin
         case (min_max_key)
-            0:          begin max = (1 << 15+1)-1; min = (1 << 5)-1; end
-            1:          begin max = (1 << 10+1)-1; min = (1 << 0)-1; end
-            2:          begin max = (1 <<  5+1)-1; min = (1 << 0)-1; end
-            default:    begin max =             0; min =          0; end
+            0:          begin max = 16'hffff; min = 16'h001f; end
+            1:          begin max = 16'h07ff; min = 16'h0000; end
+            2:          begin max = 16'h003f; min = 16'h0000; end
+            default:    begin max =        0; min =        0; end
         endcase
     end
 
@@ -37,10 +37,7 @@ module bound_flasher(CLK, RST, FLICK, LED);
         end
         else if (valid_flick) begin
             if (state == IDLE) state <= UP;
-            else if (state == DOWN && (LED == KB0 || LED == KB1)) begin
-                state <= UP;
-                if (min_max_key > 0) min_max_key <= min_max_key - 1;
-            end
+            else if (state == DOWN && min_max_key < 2 && (LED == KB0 || LED == KB1)) state <= UP;
         end
         else begin
             case (state)

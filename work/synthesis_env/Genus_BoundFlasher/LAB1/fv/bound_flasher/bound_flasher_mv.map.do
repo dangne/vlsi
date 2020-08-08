@@ -28,26 +28,27 @@ add mapped point LED[0] LED[0]
 
 
 //Sequential Pins
-add mapped point min_max_key[0]/q min_max_key_reg[0]/Q 
-add mapped point min_max_key[1]/q min_max_key_reg[1]/Q 
-add mapped point LED[12]/q LED_reg[12]/Q 
-add mapped point LED[6]/q LED_reg[6]/Q 
-add mapped point LED[7]/q LED_reg[7]/Q 
-add mapped point LED[8]/q LED_reg[8]/Q 
-add mapped point LED[14]/q LED_reg[14]/Q 
-add mapped point LED[10]/q LED_reg[10]/Q 
 add mapped point LED[11]/q LED_reg[11]/Q 
-add mapped point LED[1]/q LED_reg[1]/Q 
-add mapped point LED[0]/q LED_reg[0]/Q 
 add mapped point LED[9]/q LED_reg[9]/Q 
-add mapped point LED[13]/q LED_reg[13]/Q 
-add mapped point LED[15]/q LED_reg[15]/Q 
-add mapped point LED[4]/q LED_reg[4]/Q 
-add mapped point LED[3]/q LED_reg[3]/Q 
+add mapped point LED[10]/q LED_reg[10]/Q 
 add mapped point LED[5]/q LED_reg[5]/Q 
-add mapped point state[1]/q state_reg[1]/Q 
-add mapped point state[0]/q state_reg[0]/Q 
+add mapped point LED[7]/q LED_reg[7]/Q 
+add mapped point LED[6]/q LED_reg[6]/Q 
+add mapped point LED[8]/q LED_reg[8]/Q 
+add mapped point LED[1]/q LED_reg[1]/Q 
+add mapped point LED[12]/q LED_reg[12]/Q 
+add mapped point LED[3]/q LED_reg[3]/Q 
+add mapped point LED[0]/q LED_reg[0]/Q 
+add mapped point LED[14]/q LED_reg[14]/Q 
 add mapped point LED[2]/q LED_reg[2]/Q 
+add mapped point LED[4]/q LED_reg[4]/Q 
+add mapped point LED[13]/q LED_reg[13]/Q 
+add mapped point state[1]/q state_reg[1]/Q 
+add mapped point min_max_key[1]/q min_max_key_reg[1]/Q 
+add mapped point min_max_key[0]/q min_max_key_reg[0]/Q 
+add mapped point state[0]/q state_reg[0]/Q 
+add mapped point LED[15]/q LED_reg[15]/Q 
+add mapped point LED[15]/q LED_reg[15]/QN 
 
 
 
