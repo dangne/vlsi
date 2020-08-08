@@ -311,14 +311,14 @@
 "object":"/designs/bound_flasher/instances_seq/state_reg[0]",
 "type":"instance"},
 {"index": "1", 
- "date": "Sat Aug 08 19:22:41 +07 2020",
- "seconds": 1596889361.006376,
+ "date": "Sat Aug 08 21:58:09 +07 2020",
+ "seconds": 1596898689.320052,
  "netlist": "fv/bound_flasher/fv_map.v.gz", 
  "design_name": "bound_flasher", 
  "synth_workdir": "/home/vlsi_group2/1752170/work/synthesis_env/Genus_BoundFlasher/LAB1", 
  "synthesis_command":"",
  "current_label": "fv_map", 
  "previous_label": "rtl", 
- "write_verif_file_runtime": 0.8129109999999999 
+ "write_verif_file_runtime": 0.972785 
  }
 ]

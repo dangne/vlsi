@@ -16,8 +16,10 @@ set DESIGN bound_flasher
 set GEN_EFF medium
 set MAP_OPT_EFF high
 set DATE [clock format [clock seconds] -format "%b%d-%T"] 
-set _OUTPUTS_PATH outputs_${DATE}
-set _REPORTS_PATH reports_${DATE}
+set _OUTPUTS_PATH outputs 
+#_${DATE}
+set _REPORTS_PATH reports
+#_${DATE}
 set _LOG_PATH logs_${DATE}
 ##set ET_WORKDIR <ET work directory>
 set_db / .init_lib_search_path {. ../LIB} 

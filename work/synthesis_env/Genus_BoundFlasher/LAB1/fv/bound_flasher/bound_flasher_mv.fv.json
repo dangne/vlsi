@@ -311,14 +311,14 @@
 "object":"/designs/bound_flasher/instances_seq/LED_reg[15]",
 "type":"instance"},
 {"index": "2", 
- "date": "Sat Aug 08 19:22:52 +07 2020",
- "seconds": 1596889372.863652,
- "netlist": "outputs_Aug08-19:22:29/bound_flasher_m.v", 
+ "date": "Sat Aug 08 21:58:20 +07 2020",
+ "seconds": 1596898700.882964,
+ "netlist": "outputs/bound_flasher_m.v", 
  "design_name": "bound_flasher", 
  "synth_workdir": "/home/vlsi_group2/1752170/work/synthesis_env/Genus_BoundFlasher/LAB1", 
  "synthesis_command":"",
  "current_label": "bound_flasher_mv", 
  "previous_label": "fv_map", 
- "write_verif_file_runtime": 0.401657 
+ "write_verif_file_runtime": 0.421863 
  }
 ]
